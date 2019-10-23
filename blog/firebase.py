@@ -4,10 +4,10 @@ class Firebase():
 
     def __init__(self):
         self._config = {
-                "apiKey": "AIzaSyAZ1xdxRxoWCKmOLIyRQSK3L5PPRfOUGPg",
-                "authDomain": "flask-blog-e0abe.firebaseapp.com",
-                "databaseURL": "https://flask-blog-e0abe.firebaseio.com",
-                "storageBucket": "flask-blog-e0abe.appspot.com",
+                "apiKey": "",
+                "authDomain": "",
+                "databaseURL": "",
+                "storageBucket": "",
         }
         self.fr = pyrebase.initialize_app(self._config)
         self._auth = self.fr.auth()
