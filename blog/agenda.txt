@@ -1,0 +1,10 @@
+
+
+Tech:
+- Flask
+- DB - Firebase
+
+Outline:
+- Admin/Login
+- Add new post /edit post/
+- index/Home page/
