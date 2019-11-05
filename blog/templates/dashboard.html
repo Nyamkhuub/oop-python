@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 {% block title %}Admin heseg{% endblock %}
 {% block body %}
+	{% if status == 1%}
+	 <h3 style="background-color:green; color:white"> Өгөгдлийн санд амжилттай нэмэгдлээ!</h3>
+	{% endif %}
 	<h1>Сайн байна уу? та өөрийн хүссэн нийтлэлийг нэмнэ үү!</h1><br>
 	<form action="" method="POST" id="medee">
 		<h3>Title:</h3><br>
 		<input type="text" name="title" required /><br>
 		<h3>Body:</h3><br>
-		<textarea rows="8" cols="100" name="context" form="medee" required></textarea><br>
+		<textarea rows="8" cols="100" name="body" form="medee" required></textarea><br>
 		<input type="submit" value="submit" />
 	</form>
 {% endblock %}

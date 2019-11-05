@@ -4,10 +4,10 @@ class Firebase():
 
     def __init__(self):
         self._config = {
-                "apiKey": "",
-                "authDomain": "",
-                "databaseURL": "",
-                "storageBucket": "",
+            "apiKey": "AIzaSyAZ1xdxRxoWCKmOLIyRQSK3L5PPRfOUGPg",
+            "authDomain": "flask-blog-e0abe.firebaseapp.com",
+            "databaseURL": "https://flask-blog-e0abe.firebaseio.com",
+            "storageBucket": "flask-blog-e0abe.appspot.com",
         }
         self.fr = pyrebase.initialize_app(self._config)
         self._auth = self.fr.auth()
@@ -20,3 +20,8 @@ class Firebase():
         except:
             print('burtgelgui hereglech')
             return None
+    def getPosts(self, idToken):
+        return self._db.child('contents').get().val()
+    def addPost(self, data, postId):
+        self._db.child('contents').child(postId).child('title').set(data['title'])
+        self._db.child('contents').child(postId).child('body').set(data['body'])
